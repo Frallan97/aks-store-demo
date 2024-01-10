@@ -66,17 +66,3 @@ spec:
     targetPort: 8080
   selector:
     app: store-front
----
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: store-front
-  labels:
-    app.kubernetes.io/part-of: kube-prometheus
-    team: frontend
-spec:
-  selector:
-    matchLabels:
-      app: store-front
-  endpoints:
-  - port: store-front-lb
