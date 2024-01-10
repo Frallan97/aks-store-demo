@@ -64,6 +64,22 @@ spec:
   type: LoadBalancer  
   ports:
   - port: 80
+    name: store-admin-lb
     targetPort: 8081
   selector:
     app: store-admin
+---
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: store-admin
+  labels:
+    app.kubernetes.io/part-of: kube-prometheus
+    team: frontend
+spec:
+  selector:
+    matchLabels:
+      app: store-admin
+  endpoints:
+  - port: store-admin-lb
