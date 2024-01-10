@@ -1,5 +1,13 @@
 <template>
   <TopNav />
+  <div class="links-section">
+  <a href="http://20.62.242.178">Admin Page</a>
+  <a href="http://20.62.242.140">Product Page</a>
+  <a href="http://20.75.138.129">ArgoCD Page</a>
+  <a href="http://20.231.238.97">Alertmanager Page</a>
+  <a href="http://20.242.151.8">Grafana Page</a>
+  <a href="http://20.242.151.23">Promethius Page</a>
+</div>
   <router-view
     :orders="orders"
     :products="products"
@@ -159,6 +167,17 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links-section a {
+  color: #007acc;
+  text-decoration: none;
 }
 
 li {
