@@ -22,7 +22,7 @@
 
 <style scoped>
 .links-section {
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   border-radius: 10px;
   padding: 10px;
 }
