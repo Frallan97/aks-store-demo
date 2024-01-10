@@ -1,13 +1,13 @@
 <template>
   <TopNav />
   <div class="links-section">
-  <a href="http://20.62.242.178">Admin Page</a>
-  <a href="http://20.62.242.140">Product Page</a>
-  <a href="http://20.75.138.129">ArgoCD Page</a>
-  <a href="http://20.231.238.97">Alertmanager Page</a>
-  <a href="http://20.242.151.8">Grafana Page</a>
-  <a href="http://20.242.151.23">Promethius Page</a>
-</div>
+    <a href="http://20.62.242.178">Admin Page</a>
+    <a href="http://20.62.242.140">Product Page</a>
+    <a href="http://20.75.138.129">ArgoCD Page</a>
+    <a href="http://20.231.238.97">Alertmanager Page</a>
+    <a href="http://20.242.151.8">Grafana Page</a>
+    <a href="http://20.242.151.23">Promethius Page</a>
+  </div>
   <router-view
     :orders="orders"
     :products="products"
@@ -19,6 +19,14 @@
     @getProducts="getProducts"
   ></router-view>
 </template>
+
+<style scoped>
+.links-section {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+</style>
 
 <script>
 import TopNav from './components/TopNav.vue';
