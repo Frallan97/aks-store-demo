@@ -4,9 +4,9 @@
     <a href="http://20.62.242.178">Admin Page</a>
     <a href="http://20.62.242.140">Product Page</a>
     <a href="http://20.75.138.129">ArgoCD Page</a>
-    <a href="http://20.231.238.97">Alertmanager Page</a>
-    <a href="http://20.242.151.8">Grafana Page</a>
-    <a href="http://20.242.151.23">Promethius Page</a>
+    <a href="http://20.231.238.97:9093">Alertmanager Page</a>
+    <a href="http://20.242.151.8:3000">Grafana Page</a>
+    <a href="http://20.242.151.23:9090">Promethius Page</a>
   </div>
   <router-view
     :orders="orders"
