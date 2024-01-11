@@ -15,11 +15,20 @@ RUN npm install
 # Copy the rest of the app source code to the container
 COPY . .
 
+
 # Expose the port the app listens on
 EXPOSE 80
 
 # Set the environment variable for the app version number
 ENV APP_VERSION=$APP_VERSION
+
+# Creating group: "appGroup" and applying appuser: "runner" to that group
+RUN addgroup -S appGroup
+RUN adduser -S -D --uid 10000 --home /app runner appGroup
+RUN chown -R runner:appGroup /app
+
+# Make container run as nonRoot
+USER 10000
 
 # Start the app
 CMD [ "npm", "run", "serve" ]

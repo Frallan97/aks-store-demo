@@ -42,5 +42,12 @@ COPY --from=builder /product-service/target/release/product-service /app
 # Set the environment variable for the app version number
 ENV APP_VERSION=$APP_VERSION
 
+# Creating group: "appGroup" and applying appuser: "runner" to that group
+RUN useradd --uid 10000 runner
+USER 10000
+
+# Make container run as nonRoot
+USER 10000
+
 # Run the application
 CMD ["./product-service"]

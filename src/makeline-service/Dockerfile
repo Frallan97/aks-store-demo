@@ -27,5 +27,13 @@ EXPOSE 3001
 # Set the environment variable for the app version number
 ENV APP_VERSION=$APP_VERSION
 
+# Creating group: "appGroup" and applying appuser: "runner" to that group
+RUN addgroup -S appGroup
+RUN adduser -S -D --uid 10000 --home /app runner appGroup
+RUN chown -R runner:appGroup /app
+
+# Make container run as nonRoot
+USER 10000
+
 # Run the Go app when the container starts
 CMD ["./main"]
