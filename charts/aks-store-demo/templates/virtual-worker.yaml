@@ -16,7 +16,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: virtual-worker
-        image:  frallan97/virtual-worker:1.0.1
+        image:  frallan97/virtual-worker:1.0.3
         securityContext: 
           runAsNonRoot: true
           runAsUser: 1000  # UID of the user that the container should run as

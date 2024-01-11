@@ -39,7 +39,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: makeline-service
-        image: frallan97/makeline-service:1.0.1
+        image: frallan97/makeline-service:1.0.3
         securityContext:
           runAsNonRoot: true
           runAsUser: 10000

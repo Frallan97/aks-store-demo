@@ -37,7 +37,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: order-service
-        image: frallan97/order-service:1.0.1
+        image: frallan97/order-service:1.0.3
         securityContext: 
           runAsNonRoot: true
           runAsUser: 1000  # UID of the user that the container should run as
