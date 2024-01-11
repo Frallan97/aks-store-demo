@@ -8,20 +8,20 @@ az acr build --registry $ACRNAME --image aks-store-demo/makeline-service:latest 
 az acr build --registry $ACRNAME --image aks-store-demo/virtual-customer:latest ./src/virtual-customer/ 
 az acr build --registry $ACRNAME --image aks-store-demo/virtual-worker:latest ./src/virtual-worker/ 
 
-docker build -t frallan97/product-service:1.0.3 ./src/product-service 
-docker build -t frallan97/order-service:1.0.3 ./src/order-service 
-docker build -t frallan97/store-front:1.0.5 ./src/store-front 
-docker build -t frallan97/store-admin:1.0.6 ./src/store-admin 
-docker build -t frallan97/makeline-service:1.0.3 ./src/makeline-service
-docker build -t frallan97/virtual-customer:1.0.3 ./src/virtual-customer 
-docker build -t frallan97/virtual-worker:1.0.3 ./src/virtual-worker 
+docker build --no-cache -t frallan97/product-service:1.0.4 ./src/product-service 
+docker build --no-cache -t frallan97/order-service:1.0.4 ./src/order-service 
+docker build --no-cache -t frallan97/store-front:1.0.6 ./src/store-front 
+docker build --no-cache -t frallan97/store-admin:1.0.7 ./src/store-admin 
+docker build --no-cache -t frallan97/makeline-service:1.0.4 ./src/makeline-service
+docker build --no-cache -t frallan97/virtual-customer:1.0.4 ./src/virtual-customer 
+docker build --no-cache -t frallan97/virtual-worker:1.0.4 ./src/virtual-worker 
 
 
 
-docker push frallan97/product-service:1.0.3                                                                          frsj@PF419LY2
-docker push frallan97/order-service:1.0.3
-docker push frallan97/store-front:1.0.5
-docker push frallan97/store-admin:1.0.6
-docker push frallan97/makeline-service:1.0.3
-docker push frallan97/virtual-customer:1.0.3
-docker push frallan97/virtual-worker:1.0.3
+docker push frallan97/product-service:1.0.4                                                                          frsj@PF419LY2
+docker push frallan97/order-service:1.0.4
+docker push frallan97/store-front:1.0.6
+docker push frallan97/store-admin:1.0.7
+docker push frallan97/makeline-service:1.0.4
+docker push frallan97/virtual-customer:1.0.4
+docker push frallan97/virtual-worker:1.0.4
