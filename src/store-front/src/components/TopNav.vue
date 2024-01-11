@@ -9,6 +9,7 @@
     <ul class="nav-links" :class="{ 'nav-links--open': isNavOpen }">
       <li><router-link to="/" @click="closeNav">Products</router-link></li>
       <li><router-link to="/cart" @click="closeNav">Cart ({{ cartItemCount }})</router-link></li>
+      <button class="external-link"><a href="http://20.62.242.178/">Admin Page</a></button>
     </ul>
   </nav>
 </template>
@@ -107,5 +108,15 @@ nav {
   .hamburger {
     display: block;
   }
+}
+
+.external-link {
+  font-weight: bold;
+  color: black;
+}
+
+.external-link a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
