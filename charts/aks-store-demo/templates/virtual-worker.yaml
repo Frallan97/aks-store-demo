@@ -17,6 +17,9 @@ spec:
       containers:
       - name: virtual-worker
         image:  frallan97/virtual-worker
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         env:
         - name: MAKELINE_SERVICE_URL
           value: http://makeline-service:3001

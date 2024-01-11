@@ -38,6 +38,9 @@ spec:
       containers:
       - name: order-service
         image: frallan97/order-service
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - containerPort: 3000
         envFrom:

@@ -17,6 +17,9 @@ spec:
       containers:
       - name: virtual-customer
         image: frallan97/virtual-customer
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         env:
         - name: ORDER_SERVICE_URL
           value: http://order-service:3000/

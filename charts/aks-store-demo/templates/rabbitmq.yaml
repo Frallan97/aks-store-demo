@@ -35,6 +35,9 @@ spec:
       containers:
       - name: rabbitmq
         image: mcr.microsoft.com/mirror/docker/library/rabbitmq:3.10-management-alpine
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - containerPort: 5672
           name: rabbitmq-amqp

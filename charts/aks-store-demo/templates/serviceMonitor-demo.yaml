@@ -15,6 +15,9 @@ spec:
       containers:
       - name: example-app
         image: fabxc/instrumented_app
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - name: web
           containerPort: 8080

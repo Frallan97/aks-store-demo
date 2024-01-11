@@ -26,11 +26,10 @@ The application has the following services:
 | `store-admin` | Web app used by store employees to view orders in queue and manage products (Vue.js) | 
 | `virtual-customer` | Simulates order creation on a scheduled basis (Rust) |
 | `virtual-worker` | Simulates order completion on a scheduled basis (Rust) |
-| `ai-service` | Optional service for adding generative text and graphics creation (Python) |
 | `mongodb` | MongoDB instance for persisted data |
 | `rabbitmq` | RabbitMQ for an order queue |
 
-![Logical Application Architecture Diagram](assets/demo-arch-with-openai.png)
+![Logical Application Architecture Diagram](assets/demo-arch.png)
 
 ## Run the app on Azure Kubernetes Service (AKS)
 

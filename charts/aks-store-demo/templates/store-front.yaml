@@ -17,6 +17,9 @@ spec:
       containers:
       - name: store-front
         image: frallan97/store-front:1.0.1
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - containerPort: 8080
           name: store-front

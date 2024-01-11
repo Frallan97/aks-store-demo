@@ -17,6 +17,9 @@ spec:
       containers:
       - name: store-admin
         image: frallan97/store-admin:1.0.2
+        securityContext: 
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - containerPort: 8081
           name: store-admin

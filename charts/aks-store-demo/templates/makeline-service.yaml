@@ -40,6 +40,9 @@ spec:
       containers:
       - name: makeline-service
         image: frallan97/makeline-service
+        securityContext:  # Add this section
+          runAsNonRoot: true
+          runAsUser: 1000  # UID of the user that the container should run as
         ports:
         - containerPort: 3001
         envFrom:
