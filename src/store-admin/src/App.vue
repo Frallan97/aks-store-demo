@@ -1,12 +1,14 @@
 <template>
   <TopNav />
-  <div class="links-section">
-    <a href="http://20.62.242.178">Admin Page</a>
-    <a href="http://20.62.242.140">Product Page</a>
-    <a href="http://20.75.138.129">ArgoCD Page</a>
-    <a href="http://20.231.238.97:9093">Alertmanager Page</a>
-    <a href="http://20.242.151.8:3000">Grafana Page</a>
-    <a href="http://20.242.151.23:9090">Promethius Page</a>
+  <div class="links-container"> 
+    <h2>Links:</h2> <!-- This is the title -->
+    <div class="links-section">
+      <button><a href="http://20.62.242.140">Product Page</a></button>
+      <button><a href="http://20.75.138.129">ArgoCD Page</a></button>
+      <button><a href="http://20.231.238.97">Alertmanager Page</a></button>
+      <button><a href="http://20.242.151.8">Grafana Page</a></button>
+      <button><a href="http://20.242.151.23">Promethius Page</a></button>
+    </div>
   </div>
   <router-view
     :orders="orders"
@@ -21,10 +23,32 @@
 </template>
 
 <style scoped>
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .links-section {
   border: 3px solid #ccc;
   border-radius: 10px;
   padding: 10px;
+  max-width: 300px; /* Adjust this value as needed */
+  display: flex; /* Changed from inline-block to flex */
+  flex-direction: row; /* Aligns the buttons horizontally */
+  justify-content: center; /* Centers the buttons horizontally */
+  align-items: center; /* Centers the buttons vertically */
+  flex-wrap: wrap; /* Allows the buttons to wrap to the next line if there isn't enough space */
+}
+
+.links-section button {
+  margin: 5px; /* Adds a little space around each button */
+  padding: 5px;
+}
+
+.links-section a {
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>
 
