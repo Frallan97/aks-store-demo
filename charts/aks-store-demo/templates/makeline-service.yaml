@@ -40,10 +40,9 @@ spec:
       containers:
       - name: makeline-service
         image: frallan97/makeline-service:1.0.4
-        securityContext:
-          runAsNonRoot: true
-          runAsUser: 10000
-          runAsGroup: 10000
+        # securityContext:
+        #   runAsNonRoot: true
+        #   runAsUser: 10000
         ports:
         - containerPort: 3001
         envFrom:

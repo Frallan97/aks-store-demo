@@ -17,9 +17,9 @@ spec:
       containers:
       - name: product-service
         image: frallan97/product-service:1.0.4
-        securityContext: 
-          runAsNonRoot: true
-          runAsUser: 1000  # UID of the user that the container should run as
+        # securityContext:
+        #   runAsNonRoot: true
+        #   runAsUser: 10000
         ports:
         - containerPort: 3002
         resources:
