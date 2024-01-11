@@ -16,7 +16,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: virtual-customer
-        image: frallan97/virtual-customer
+        image: frallan97/virtual-customer:1.0.1
         securityContext: 
           runAsNonRoot: true
           runAsUser: 1000  # UID of the user that the container should run as

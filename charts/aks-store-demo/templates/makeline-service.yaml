@@ -39,10 +39,11 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: makeline-service
-        image: frallan97/makeline-service
-        securityContext:  # Add this section
+        image: frallan97/makeline-service:1.0.1
+        securityContext:
           runAsNonRoot: true
-          runAsUser: 1000  # UID of the user that the container should run as
+          runAsUser: 10000
+          runAsGroup: 10000
         ports:
         - containerPort: 3001
         envFrom:
